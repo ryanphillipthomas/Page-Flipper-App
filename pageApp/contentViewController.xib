@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,15 +9,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="contentViewController">
             <connections>
+                <outlet property="backButton" destination="HqY-UB-dIz" id="Sm7-eB-9us"/>
                 <outlet property="bookTitleLabel" destination="OgP-1G-kWc" id="jkH-0V-oAF"/>
+                <outlet property="bookmarkButton" destination="qO3-Nj-fEs" id="iWA-AB-FFE"/>
                 <outlet property="bottomToolBar" destination="5P9-zx-xmd" id="FJB-Uo-Loh"/>
+                <outlet property="chapterButton" destination="kLH-rv-2MX" id="LMi-Ob-d2e"/>
                 <outlet property="contentWebView" destination="F9u-d3-MTe" id="3Jg-Xk-L7f"/>
+                <outlet property="fontsButton" destination="pl0-Zx-CWa" id="Yy6-wI-ZX8"/>
                 <outlet property="numberOfPagesLeftLabel" destination="xZj-cY-xIa" id="4L9-8m-lzI"/>
                 <outlet property="pageOfPagesLabel" destination="HeO-y7-i36" id="Uds-fh-eaD"/>
                 <outlet property="scrubberChapterLabel" destination="dP2-nL-MQX" id="9ob-2r-xBR"/>
                 <outlet property="scrubberContentView" destination="UUj-vU-D1I" id="TCT-at-hAc"/>
                 <outlet property="scrubberPagesLabel" destination="v0c-vB-TQu" id="ea5-wT-QwV"/>
                 <outlet property="scrubberView" destination="JMB-b0-LF5" id="goO-eQ-y6U"/>
+                <outlet property="searchButton" destination="UpK-au-t1U" id="DEl-6x-gZi"/>
                 <outlet property="toolbarGestureView" destination="iZk-Qh-1sE" id="hcq-Zq-TyS"/>
                 <outlet property="topToolBar" destination="JAc-K9-iti" id="x2H-eR-cau"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -60,6 +65,9 @@
                                 <constraint firstAttribute="width" constant="20" id="EQG-nF-6nc"/>
                             </constraints>
                             <state key="normal" backgroundImage="Back"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="ZxZ-bc-JWD"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLH-rv-2MX" userLabel="chapterButton">
                             <rect key="frame" x="47" y="12" width="20" height="20"/>
@@ -67,6 +75,9 @@
                                 <constraint firstAttribute="width" constant="20" id="uNo-4r-i8s"/>
                             </constraints>
                             <state key="normal" backgroundImage="list"/>
+                            <connections>
+                                <action selector="chapterButtonTapped:" destination="-1" eventType="touchUpInside" id="Eqh-GI-Rxo"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl0-Zx-CWa" userLabel="fontsButton">
                             <rect key="frame" x="493" y="12" width="20" height="20"/>
@@ -74,6 +85,9 @@
                                 <constraint firstAttribute="width" constant="20" id="Ecj-rJ-cEq"/>
                             </constraints>
                             <state key="normal" backgroundImage="letter"/>
+                            <connections>
+                                <action selector="fontsButtonTapped:" destination="-1" eventType="touchUpInside" id="8AD-oJ-DAu"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpK-au-t1U" userLabel="searchButton">
                             <rect key="frame" x="528" y="12" width="20" height="20"/>
@@ -81,6 +95,9 @@
                                 <constraint firstAttribute="width" constant="20" id="MQw-CX-Knt"/>
                             </constraints>
                             <state key="normal" backgroundImage="magnifying-glass"/>
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="hRV-iG-21f"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO3-Nj-fEs" userLabel="bookmarkButton">
                             <rect key="frame" x="563" y="12" width="20" height="20"/>
@@ -88,6 +105,9 @@
                                 <constraint firstAttribute="width" constant="20" id="hGv-PH-kqt"/>
                             </constraints>
                             <state key="normal" backgroundImage="bookmark"/>
+                            <connections>
+                                <action selector="bookmarkButtonTapped:" destination="-1" eventType="touchUpInside" id="FOF-fl-eVw"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,10 +142,10 @@
                     </constraints>
                 </view>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZk-Qh-1sE" userLabel="toolBarGestureView" customClass="toolbarGestureView">
-                    <rect key="frame" x="30" y="0.0" width="540" height="550"/>
+                    <rect key="frame" x="30" y="64" width="540" height="486"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="550" id="c6e-BX-rfw"/>
+                        <constraint firstAttribute="height" constant="486" id="c6e-BX-rfw"/>
                     </constraints>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-vU-D1I">
@@ -220,7 +240,7 @@
                 <constraint firstItem="JAc-K9-iti" firstAttribute="bottom" secondItem="OgP-1G-kWc" secondAttribute="bottom" id="ZIY-s2-hX4"/>
                 <constraint firstItem="F9u-d3-MTe" firstAttribute="leading" secondItem="iZk-Qh-1sE" secondAttribute="leading" id="b3J-jU-GBM"/>
                 <constraint firstItem="OgP-1G-kWc" firstAttribute="trailing" secondItem="JAc-K9-iti" secondAttribute="trailing" id="bRr-bA-BpX"/>
-                <constraint firstItem="iZk-Qh-1sE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bSc-9f-qJR"/>
+                <constraint firstItem="iZk-Qh-1sE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="bSc-9f-qJR"/>
                 <constraint firstItem="5P9-zx-xmd" firstAttribute="top" secondItem="F9u-d3-MTe" secondAttribute="bottom" id="h2M-df-mUo"/>
                 <constraint firstItem="5P9-zx-xmd" firstAttribute="trailing" secondItem="HeO-y7-i36" secondAttribute="trailing" id="h5t-6Y-UVD"/>
                 <constraint firstAttribute="bottom" secondItem="HeO-y7-i36" secondAttribute="bottom" constant="9" id="l91-Qq-kRn"/>

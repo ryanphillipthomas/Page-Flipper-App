@@ -7,7 +7,8 @@
 //
 
 #import "contentViewController.h"
-#import "ZOFullScreenImageViewController.h"
+#import "ZOZoomImageViewController.h"
+#import "ZOReaderSettingsViewController.h"
 
 #define kToolBarFadeDuration            0.33f
 #define IDIOM    UI_USER_INTERFACE_IDIOM()
@@ -23,8 +24,7 @@
     NSInteger _totalNumberOfPages;
 }
 
-@synthesize contentWebView, dataObject;
-
+@synthesize contentWebView, dataObject, imageURL;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil toolBarsHidden:(BOOL)toolBarsHidden currentPageNumber:(NSInteger)currentPageNumber totalNumberOfPages:(NSInteger)totalNumberOfPages;
 
@@ -55,7 +55,17 @@
     //The setup code (in viewDidLoad in your view controller)
     UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toolBarGestureTapped:)];
     singleFingerTap.delegate = self;
+    singleFingerTap.numberOfTapsRequired = 1;
+    
+    UITapGestureRecognizer *doubleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+    doubleFingerTap.numberOfTapsRequired = 2;
+    doubleFingerTap.delegate = self;
+    
+    [self.toolbarGestureView addGestureRecognizer:doubleFingerTap];
     [self.toolbarGestureView addGestureRecognizer:singleFingerTap];
+    
+    [singleFingerTap requireGestureRecognizerToFail:doubleFingerTap];
+   // [doubleFingerTap requireGestureRecognizerToFail:singleFingerTap];
 }
 
 - (void)setupScrubber
@@ -165,6 +175,19 @@
     self.contentWebView.scrollView.bounces = NO;
 }
 
+- (void)handleDoubleTap:(UITapGestureRecognizer *)sender
+{
+    if ([self shouldDisplayImageDetail]) {
+        ZOZoomImageViewController *viewController = [[ZOZoomImageViewController alloc] initWithImageURL:self.imageURL
+                                                                                         backroundColor:[UIColor whiteColor]
+                                                                                            actionColor:[UIColor whiteColor]];
+        
+        [self presentViewController:viewController animated:YES completion:^{
+            [self didDisplayImageDetail];
+        }];
+    }
+}
+
 - (void)toolBarGestureTapped:(id)selector
 {
     BOOL hidden = (_toolBarsHidden) ? NO : YES;
@@ -188,21 +211,100 @@
     }];
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return NO;
+}
+
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
     if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
         CGPoint point = [touch locationInView:self.view];
         
-        if ([self pointInsideScrubber:point]) {
+        //Examine point and return NO, if gesture should be ignored.
+        if ([self pointInsideReaderControllerActionObjects:point]) {
             return NO;
         }
-        
-        //Examine point and return NO, if gesture should be ignored.
-        
     }
+    
+    [self processImageDetailGestureRecognizer:gestureRecognizer withTouch:touch];
+
     return YES;
 }
 
+// Actions
+- (IBAction)backButtonTapped:(id)sender {
+    
+}
+
+- (IBAction)chapterButtonTapped:(id)sender {
+}
+
+- (IBAction)fontsButtonTapped:(id)sender {
+    ZOReaderSettingsViewController *readerSettingsViewController = [[ZOReaderSettingsViewController alloc] initWithNibName:nil bundle:nil];
+    readerSettingsViewController.modalPresentationStyle = UIModalPresentationPopover;
+    
+    UIPopoverPresentationController *popView = readerSettingsViewController.popoverPresentationController;
+    readerSettingsViewController.popoverPresentationController.sourceRect = self.fontsButton.bounds;
+    readerSettingsViewController.popoverPresentationController.sourceView = self.fontsButton;
+    
+    popView.delegate = self;
+    popView.permittedArrowDirections = UIPopoverArrowDirectionUp;
+
+    [self presentViewController:readerSettingsViewController animated:YES completion:nil];
+}
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    
+    return UIModalPresentationNone;
+}
+
+- (IBAction)searchButtonTapped:(id)sender {
+}
+
+
+- (IBAction)bookmarkButtonTapped:(id)sender {
+}
+
+
+- (BOOL)pointInsideReaderControllerActionObjects:(CGPoint)point
+{
+    if ([self pointInsideScrubber:point]
+        || [self pointInsideFontsButton:point]
+        || [self pointInsideSearchButton:point]
+        || [self pointInsideChapterButton:point]
+        || [self pointInsideBookmarkButton:point]
+        || [self pointInsideBackButton:point]) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)pointInsideBackButton:(CGPoint)point
+{
+    return CGRectContainsPoint(self.backButton.frame, point);
+}
+
+- (BOOL)pointInsideBookmarkButton:(CGPoint)point
+{
+    return CGRectContainsPoint(self.bookmarkButton.frame, point);
+}
+
+- (BOOL)pointInsideSearchButton:(CGPoint)point
+{
+    return CGRectContainsPoint(self.searchButton.frame, point);
+}
+
+- (BOOL)pointInsideFontsButton:(CGPoint)point
+{
+    return CGRectContainsPoint(self.fontsButton.frame, point);
+}
+
+- (BOOL)pointInsideChapterButton:(CGPoint)point
+{
+    return CGRectContainsPoint(self.chapterButton.frame, point);
+}
 
 - (BOOL)pointInsideScrubber:(CGPoint)point
 {
@@ -237,6 +339,49 @@
         CGFloat alpha = (hidden) ? 0.0 : 0.9;
         [self.scrubberContentView setAlpha:alpha];
     }];
+}
+
+//Image Detail Methods
+- (void)processImageDetailGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer withTouch:(UITouch *)touch {
+    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
+        CGPoint touchPoint = [touch locationInView:self.view];
+        
+        if([[UIApplication sharedApplication] statusBarOrientation]==UIInterfaceOrientationPortrait||
+           [[UIApplication sharedApplication] statusBarOrientation]==UIInterfaceOrientationPortraitUpsideDown) {
+            NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
+            NSString *imgTag = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", touchPoint.x, touchPoint.y];
+            
+            NSString *url = [contentWebView stringByEvaluatingJavaScriptFromString:imgURL];
+            NSString *tag = [contentWebView stringByEvaluatingJavaScriptFromString:imgTag];
+            
+            if ([self shouldSaveImageURL:url tagName:tag]) {
+                self.imageURL = [NSURL URLWithString:url];
+            }
+        }
+    }
+}
+
+- (BOOL)shouldSaveImageURL:(NSString *)urlToSave tagName:(NSString *)tagName
+{
+    if ([tagName isEqualToString:@"img"] && urlToSave.length > 0) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)shouldDisplayImageDetail
+{
+    if (self.imageURL.absoluteString.length > 0) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (void)didDisplayImageDetail
+{
+    self.imageURL = nil;
 }
 
 @end
