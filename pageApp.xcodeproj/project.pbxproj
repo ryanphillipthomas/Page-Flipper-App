@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		0AAF35C61CDD96CA00F5C843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF35C51CDD96CA00F5C843 /* main.m */; };
 		0AAF35C91CDD96CA00F5C843 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF35C81CDD96CA00F5C843 /* AppDelegate.m */; };
-		0AAF35CC1CDD96CA00F5C843 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF35CB1CDD96CA00F5C843 /* ViewController.m */; };
-		0AAF35CF1CDD96CA00F5C843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF35CD1CDD96CA00F5C843 /* Main.storyboard */; };
+		0AAF35CC1CDD96CA00F5C843 /* ZOReaderFlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF35CB1CDD96CA00F5C843 /* ZOReaderFlipViewController.m */; };
 		0AAF35D11CDD96CA00F5C843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF35D01CDD96CA00F5C843 /* Assets.xcassets */; };
 		0AAF35D41CDD96CB00F5C843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF35D21CDD96CB00F5C843 /* LaunchScreen.storyboard */; };
+		0AAF35DE1CDD977000F5C843 /* contentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF35DC1CDD977000F5C843 /* contentViewController.m */; };
+		0AAF35DF1CDD977000F5C843 /* contentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF35DD1CDD977000F5C843 /* contentViewController.xib */; };
+		0AAF35E11CDDAC8600F5C843 /* ZOReaderFlipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF35E01CDDAC8600F5C843 /* ZOReaderFlipViewController.xib */; };
+		0ADDC3DD1CDF807F005AEF65 /* ZOFullScreenImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDC3DB1CDF807F005AEF65 /* ZOFullScreenImageViewController.m */; };
+		0ADDC3DE1CDF807F005AEF65 /* ZOFullScreenImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDC3DC1CDF807F005AEF65 /* ZOFullScreenImageViewController.xib */; };
+		0AFBBACE1CDEA32600B25ADE /* book in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBBACD1CDEA32600B25ADE /* book */; };
+		59AE55944C2F403200D00BDE /* libPods-pageApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA85EF8340880D8AC2494ECA /* libPods-pageApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +26,22 @@
 		0AAF35C51CDD96CA00F5C843 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AAF35C71CDD96CA00F5C843 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AAF35C81CDD96CA00F5C843 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0AAF35CA1CDD96CA00F5C843 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0AAF35CB1CDD96CA00F5C843 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0AAF35CE1CDD96CA00F5C843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AAF35CA1CDD96CA00F5C843 /* ZOReaderFlipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZOReaderFlipViewController.h; sourceTree = "<group>"; };
+		0AAF35CB1CDD96CA00F5C843 /* ZOReaderFlipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZOReaderFlipViewController.m; sourceTree = "<group>"; };
 		0AAF35D01CDD96CA00F5C843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AAF35D31CDD96CB00F5C843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AAF35D51CDD96CB00F5C843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAF35DB1CDD977000F5C843 /* contentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentViewController.h; sourceTree = "<group>"; };
+		0AAF35DC1CDD977000F5C843 /* contentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentViewController.m; sourceTree = "<group>"; };
+		0AAF35DD1CDD977000F5C843 /* contentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contentViewController.xib; sourceTree = "<group>"; };
+		0AAF35E01CDDAC8600F5C843 /* ZOReaderFlipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZOReaderFlipViewController.xib; sourceTree = "<group>"; };
+		0ADDC3DA1CDF807F005AEF65 /* ZOFullScreenImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOFullScreenImageViewController.h; sourceTree = "<group>"; };
+		0ADDC3DB1CDF807F005AEF65 /* ZOFullScreenImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOFullScreenImageViewController.m; sourceTree = "<group>"; };
+		0ADDC3DC1CDF807F005AEF65 /* ZOFullScreenImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZOFullScreenImageViewController.xib; sourceTree = "<group>"; };
+		0AFBBACD1CDEA32600B25ADE /* book */ = {isa = PBXFileReference; lastKnownFileType = folder; path = book; sourceTree = "<group>"; };
+		4761ABF6581464E7A9F78148 /* Pods-pageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pageApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pageApp/Pods-pageApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DA85EF8340880D8AC2494ECA /* libPods-pageApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pageApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E11667F3B224E4A2C850D6 /* Pods-pageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pageApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-pageApp/Pods-pageApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59AE55944C2F403200D00BDE /* libPods-pageApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,8 @@
 			children = (
 				0AAF35C31CDD96CA00F5C843 /* pageApp */,
 				0AAF35C21CDD96CA00F5C843 /* Products */,
+				9F18786639E4C35FDED8518E /* Pods */,
+				A6B73A77DBE3C45F49DC6C1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +77,18 @@
 		0AAF35C31CDD96CA00F5C843 /* pageApp */ = {
 			isa = PBXGroup;
 			children = (
+				0AFBBACD1CDEA32600B25ADE /* book */,
 				0AAF35C71CDD96CA00F5C843 /* AppDelegate.h */,
 				0AAF35C81CDD96CA00F5C843 /* AppDelegate.m */,
-				0AAF35CA1CDD96CA00F5C843 /* ViewController.h */,
-				0AAF35CB1CDD96CA00F5C843 /* ViewController.m */,
-				0AAF35CD1CDD96CA00F5C843 /* Main.storyboard */,
+				0AAF35CA1CDD96CA00F5C843 /* ZOReaderFlipViewController.h */,
+				0AAF35CB1CDD96CA00F5C843 /* ZOReaderFlipViewController.m */,
+				0AAF35E01CDDAC8600F5C843 /* ZOReaderFlipViewController.xib */,
+				0AAF35DB1CDD977000F5C843 /* contentViewController.h */,
+				0AAF35DC1CDD977000F5C843 /* contentViewController.m */,
+				0AAF35DD1CDD977000F5C843 /* contentViewController.xib */,
+				0ADDC3DA1CDF807F005AEF65 /* ZOFullScreenImageViewController.h */,
+				0ADDC3DB1CDF807F005AEF65 /* ZOFullScreenImageViewController.m */,
+				0ADDC3DC1CDF807F005AEF65 /* ZOFullScreenImageViewController.xib */,
 				0AAF35D01CDD96CA00F5C843 /* Assets.xcassets */,
 				0AAF35D21CDD96CB00F5C843 /* LaunchScreen.storyboard */,
 				0AAF35D51CDD96CB00F5C843 /* Info.plist */,
@@ -79,6 +105,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9F18786639E4C35FDED8518E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4761ABF6581464E7A9F78148 /* Pods-pageApp.debug.xcconfig */,
+				F0E11667F3B224E4A2C850D6 /* Pods-pageApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6B73A77DBE3C45F49DC6C1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA85EF8340880D8AC2494ECA /* libPods-pageApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AAF35D81CDD96CB00F5C843 /* Build configuration list for PBXNativeTarget "pageApp" */;
 			buildPhases = (
+				9F27E5E1B7B419D3D94E1EA7 /* 📦 Check Pods Manifest.lock */,
 				0AAF35BD1CDD96CA00F5C843 /* Sources */,
 				0AAF35BE1CDD96CA00F5C843 /* Frameworks */,
 				0AAF35BF1CDD96CA00F5C843 /* Resources */,
+				507C87DC515506FED3F29AC3 /* 📦 Embed Pods Frameworks */,
+				D6079DC6E4AA3089C82247A8 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +156,8 @@
 				TargetAttributes = {
 					0AAF35C01CDD96CA00F5C843 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 99YV7MFP67;
+						DevelopmentTeamName = "Bookivore, Inc.";
 					};
 				};
 			};
@@ -136,20 +184,73 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADDC3DE1CDF807F005AEF65 /* ZOFullScreenImageViewController.xib in Resources */,
+				0AAF35E11CDDAC8600F5C843 /* ZOReaderFlipViewController.xib in Resources */,
+				0AAF35DF1CDD977000F5C843 /* contentViewController.xib in Resources */,
 				0AAF35D41CDD96CB00F5C843 /* LaunchScreen.storyboard in Resources */,
 				0AAF35D11CDD96CA00F5C843 /* Assets.xcassets in Resources */,
-				0AAF35CF1CDD96CA00F5C843 /* Main.storyboard in Resources */,
+				0AFBBACE1CDEA32600B25ADE /* book in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		507C87DC515506FED3F29AC3 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pageApp/Pods-pageApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F27E5E1B7B419D3D94E1EA7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6079DC6E4AA3089C82247A8 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pageApp/Pods-pageApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AAF35BD1CDD96CA00F5C843 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AAF35CC1CDD96CA00F5C843 /* ViewController.m in Sources */,
+				0ADDC3DD1CDF807F005AEF65 /* ZOFullScreenImageViewController.m in Sources */,
+				0AAF35DE1CDD977000F5C843 /* contentViewController.m in Sources */,
+				0AAF35CC1CDD96CA00F5C843 /* ZOReaderFlipViewController.m in Sources */,
 				0AAF35C91CDD96CA00F5C843 /* AppDelegate.m in Sources */,
 				0AAF35C61CDD96CA00F5C843 /* main.m in Sources */,
 			);
@@ -158,14 +259,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0AAF35CD1CDD96CA00F5C843 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AAF35CE1CDD96CA00F5C843 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0AAF35D21CDD96CB00F5C843 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -263,6 +356,7 @@
 		};
 		0AAF35D91CDD96CB00F5C843 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4761ABF6581464E7A9F78148 /* Pods-pageApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pageApp/Info.plist;
@@ -274,6 +368,7 @@
 		};
 		0AAF35DA1CDD96CB00F5C843 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E11667F3B224E4A2C850D6 /* Pods-pageApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pageApp/Info.plist;
@@ -302,6 +397,7 @@
 				0AAF35DA1CDD96CB00F5C843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
