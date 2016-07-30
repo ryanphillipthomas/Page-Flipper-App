@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A052D701D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A052D6E1D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.m */; };
+		0A052D711D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A052D6F1D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.xib */; };
+		0A052D751D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A052D731D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.m */; };
+		0A052D761D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A052D741D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.xib */; };
+		0A052D7A1D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A052D781D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.m */; };
+		0A052D7B1D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A052D791D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.xib */; };
 		0A3833591D4BF66600C61CEF /* ZOReaderSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3833571D4BF66600C61CEF /* ZOReaderSettingsViewController.m */; };
 		0A38335A1D4BF66600C61CEF /* ZOReaderSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3833581D4BF66600C61CEF /* ZOReaderSettingsViewController.xib */; };
 		0A38335E1D4BF85100C61CEF /* ZOReaderSettingBrightnessTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38335C1D4BF85100C61CEF /* ZOReaderSettingBrightnessTableViewCell.m */; };
@@ -34,6 +40,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A052D6D1D4CFDD7006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOReaderSettingTransitionAnimationTableViewCell.h; sourceTree = "<group>"; };
+		0A052D6E1D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOReaderSettingTransitionAnimationTableViewCell.m; sourceTree = "<group>"; };
+		0A052D6F1D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZOReaderSettingTransitionAnimationTableViewCell.xib; sourceTree = "<group>"; };
+		0A052D721D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOReaderSettingTransitionDirectionTableViewCell.h; sourceTree = "<group>"; };
+		0A052D731D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOReaderSettingTransitionDirectionTableViewCell.m; sourceTree = "<group>"; };
+		0A052D741D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZOReaderSettingTransitionDirectionTableViewCell.xib; sourceTree = "<group>"; };
+		0A052D771D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOReaderSettingSideBySideTableViewCell.h; sourceTree = "<group>"; };
+		0A052D781D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOReaderSettingSideBySideTableViewCell.m; sourceTree = "<group>"; };
+		0A052D791D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZOReaderSettingSideBySideTableViewCell.xib; sourceTree = "<group>"; };
 		0A3833561D4BF66600C61CEF /* ZOReaderSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOReaderSettingsViewController.h; sourceTree = "<group>"; };
 		0A3833571D4BF66600C61CEF /* ZOReaderSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOReaderSettingsViewController.m; sourceTree = "<group>"; };
 		0A3833581D4BF66600C61CEF /* ZOReaderSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZOReaderSettingsViewController.xib; sourceTree = "<group>"; };
@@ -104,6 +119,15 @@
 				0A3833721D4BF92700C61CEF /* ZOReaderSettingAutoNightModeTableViewCell.h */,
 				0A3833731D4BF92700C61CEF /* ZOReaderSettingAutoNightModeTableViewCell.m */,
 				0A3833741D4BF92700C61CEF /* ZOReaderSettingAutoNightModeTableViewCell.xib */,
+				0A052D6D1D4CFDD7006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.h */,
+				0A052D6E1D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.m */,
+				0A052D6F1D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.xib */,
+				0A052D721D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.h */,
+				0A052D731D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.m */,
+				0A052D741D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.xib */,
+				0A052D771D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.h */,
+				0A052D781D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.m */,
+				0A052D791D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.xib */,
 			);
 			name = ZOReaderSettingsTableViewCells;
 			sourceTree = "<group>";
@@ -245,9 +269,12 @@
 				0AAF35DF1CDD977000F5C843 /* contentViewController.xib in Resources */,
 				0AAF35D41CDD96CB00F5C843 /* LaunchScreen.storyboard in Resources */,
 				0AAF35D11CDD96CA00F5C843 /* Assets.xcassets in Resources */,
+				0A052D711D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.xib in Resources */,
 				0A38336C1D4BF8D500C61CEF /* ZOReaderSettingFontTypeTableViewCell.xib in Resources */,
 				0A3833641D4BF86900C61CEF /* ZOReaderSettingFontSizeTableViewCell.xib in Resources */,
 				0AFF18941D4BCDBF000A4CC4 /* ZOZoomImageViewController.xib in Resources */,
+				0A052D761D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.xib in Resources */,
+				0A052D7B1D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.xib in Resources */,
 				0A3833711D4BF90500C61CEF /* ZOReaderSettingColorSchemeTableViewCell.xib in Resources */,
 				0A38335A1D4BF66600C61CEF /* ZOReaderSettingsViewController.xib in Resources */,
 				0AFBBACE1CDEA32600B25ADE /* book in Resources */,
@@ -310,6 +337,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A052D701D4CFDD8006316B4 /* ZOReaderSettingTransitionAnimationTableViewCell.m in Sources */,
+				0A052D751D4CFDF2006316B4 /* ZOReaderSettingTransitionDirectionTableViewCell.m in Sources */,
 				0A3833631D4BF86900C61CEF /* ZOReaderSettingFontSizeTableViewCell.m in Sources */,
 				0AAF35DE1CDD977000F5C843 /* contentViewController.m in Sources */,
 				0AFF18931D4BCDBF000A4CC4 /* ZOZoomImageViewController.m in Sources */,
@@ -317,6 +346,7 @@
 				0A38336B1D4BF8D500C61CEF /* ZOReaderSettingFontTypeTableViewCell.m in Sources */,
 				0A3833701D4BF90500C61CEF /* ZOReaderSettingColorSchemeTableViewCell.m in Sources */,
 				0AAF35CC1CDD96CA00F5C843 /* ZOReaderFlipViewController.m in Sources */,
+				0A052D7A1D4CFE0B006316B4 /* ZOReaderSettingSideBySideTableViewCell.m in Sources */,
 				0A38335E1D4BF85100C61CEF /* ZOReaderSettingBrightnessTableViewCell.m in Sources */,
 				0A3833751D4BF92700C61CEF /* ZOReaderSettingAutoNightModeTableViewCell.m in Sources */,
 				0AAF35C91CDD96CA00F5C843 /* AppDelegate.m in Sources */,

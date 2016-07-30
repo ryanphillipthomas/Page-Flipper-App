@@ -13,6 +13,10 @@
 #import "ZOReaderSettingColorSchemeTableViewCell.h"
 #import "ZOReaderSettingAutoNightModeTableViewCell.h"
 
+#import "ZOReaderSettingTransitionAnimationTableViewCell.h"
+#import "ZOReaderSettingTransitionDirectionTableViewCell.h"
+#import "ZOReaderSettingSideBySideTableViewCell.h"
+
 @interface ZOReaderSettingsViewController ()
 
 @end
@@ -74,6 +78,28 @@
             }
         }
     }
+    
+    if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            cell = (ZOReaderSettingTransitionAnimationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"transitionAnimation"];
+            if (cell == nil) {
+                [tableView registerNib:[UINib nibWithNibName:@"ZOReaderSettingTransitionAnimationTableViewCell" bundle:nil] forCellReuseIdentifier:@"transitionAnimation"];
+                cell = (ZOReaderSettingTransitionAnimationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"transitionAnimation"];
+            }
+        } else  if (indexPath.row == 1 ){
+            cell = (ZOReaderSettingTransitionDirectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"transitionDirection"];
+            if (cell == nil) {
+                [tableView registerNib:[UINib nibWithNibName:@"ZOReaderSettingTransitionDirectionTableViewCell" bundle:nil] forCellReuseIdentifier:@"transitionDirection"];
+                cell = (ZOReaderSettingTransitionDirectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"transitionDirection"];
+            }
+        } else {
+            cell = (ZOReaderSettingSideBySideTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"sideBySide"];
+            if (cell == nil) {
+                [tableView registerNib:[UINib nibWithNibName:@"ZOReaderSettingSideBySideTableViewCell" bundle:nil] forCellReuseIdentifier:@"sideBySide"];
+                cell = (ZOReaderSettingSideBySideTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"sideBySide"];
+            }
+        }
+    }
 
     return cell;
 }
@@ -94,12 +120,16 @@
         rows = 2;
     }
     
+    if (section == 3) {
+        rows = 3;
+    }
+    
     return rows;
 }
 
 - (NSInteger )numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 
 @end

@@ -345,18 +345,14 @@
 - (void)processImageDetailGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer withTouch:(UITouch *)touch {
     if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
         CGPoint touchPoint = [touch locationInView:self.view];
+        NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
+        NSString *imgTag = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", touchPoint.x, touchPoint.y];
         
-        if([[UIApplication sharedApplication] statusBarOrientation]==UIInterfaceOrientationPortrait||
-           [[UIApplication sharedApplication] statusBarOrientation]==UIInterfaceOrientationPortraitUpsideDown) {
-            NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
-            NSString *imgTag = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", touchPoint.x, touchPoint.y];
-            
-            NSString *url = [contentWebView stringByEvaluatingJavaScriptFromString:imgURL];
-            NSString *tag = [contentWebView stringByEvaluatingJavaScriptFromString:imgTag];
-            
-            if ([self shouldSaveImageURL:url tagName:tag]) {
-                self.imageURL = [NSURL URLWithString:url];
-            }
+        NSString *url = [contentWebView stringByEvaluatingJavaScriptFromString:imgURL];
+        NSString *tag = [contentWebView stringByEvaluatingJavaScriptFromString:imgTag];
+        
+        if ([self shouldSaveImageURL:url tagName:tag]) {
+            self.imageURL = [NSURL URLWithString:url];
         }
     }
 }
