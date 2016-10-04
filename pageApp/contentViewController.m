@@ -153,10 +153,24 @@
 //    /* Handle navigation */
 //    int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 //    self.screensInCurrentChapterCount = (int)ceil(totalWidth/webView.bounds.size.width);
+
+    [UIView transitionWithView:webView
+                      duration:0.6
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        webView.alpha = 1.0;
+                    } completion:NULL];
+    
+}
+
+- (void) dealloc {
+    [self.contentWebView stopLoading];
+    self.contentWebView.delegate = nil;
 }
 
 - (void)setupWebView
 {
+    self.contentWebView.alpha = 0.0;
     [self.contentWebView loadRequest:[NSURLRequest requestWithURL:dataObject]];
     self.contentWebView.delegate = self;
 }

@@ -48,7 +48,7 @@
             startingLineNumber = "258"
             endingLineNumber = "258"
             landmarkName = "-pageViewController:viewControllerBeforeViewController:"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,7 +64,7 @@
             startingLineNumber = "275"
             endingLineNumber = "275"
             landmarkName = "-pageViewController:viewControllerAfterViewController:"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,7 +80,7 @@
             startingLineNumber = "279"
             endingLineNumber = "279"
             landmarkName = "-pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -96,7 +96,7 @@
             startingLineNumber = "284"
             endingLineNumber = "284"
             landmarkName = "-pageViewController:willTransitionToViewControllers:"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -112,7 +112,7 @@
             startingLineNumber = "254"
             endingLineNumber = "254"
             landmarkName = "-pageViewController:viewControllerBeforeViewController:"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,7 +128,7 @@
             startingLineNumber = "273"
             endingLineNumber = "273"
             landmarkName = "-pageViewController:viewControllerAfterViewController:"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
